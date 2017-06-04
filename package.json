@@ -1,0 +1,15 @@
+{
+  "name": "undecided",
+  "version": "1.0.0",
+  "description": "hmmm",
+  "main": "undecided.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "emma",
+    "rae"
+  ],
+  "author": "emma rae",
+  "license": "ISC"
+}
