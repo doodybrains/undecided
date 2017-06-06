@@ -16,3 +16,5 @@ function createDirectoryStructure() {
     console.log(err);
   })
 }
+
+module.exports.createDirectoryStructure = createDirectoryStructure;

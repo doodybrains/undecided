@@ -10,9 +10,6 @@
     "emma",
     "rae"
   ],
-  "bin": {
-    "github-pages-commit": "bin/commit.js"
-  },
   "author": "emma rae",
   "license": "ISC",
   "dependencies": {
