@@ -1,4 +1,4 @@
-var tasks = require('./gulpfile');
+var create = require('./create');
 
 function createDirectoryStructure() {
   // create index.html
@@ -49,4 +49,4 @@ function unanimateLinks() {
   // remove animation + styles
 }
 
-tasks.createDirectoryStructure();
+create.createDirectoryStructure();

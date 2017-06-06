@@ -2,28 +2,6 @@ var gulp = require('gulp');
 var template = require('gulp-template');
 var data = require('gulp-data');
 var fs = require('fs');
-var createFile = require('create-file');
-
-function createDirectoryStructure() {
-  // create index.html
-  // create json file
-  var linkObject = {
-    "linkOne": {
-     "title": "",
-     "url": ""
-   },
-   "linkTwo": {
-    "title": "",
-    "url": ""
-   }
-  };
-  return gulp.task('create', () =>
-    createFile('data/index.json', JSON.stringify(linkObject), function (err) {
-      console.log(err);
-    })
-  );
-}
-
 
 gulp.task('build', () =>
   gulp.src('src/index.html')
