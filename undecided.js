@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 var create = require('./create');
 
 function createDirectoryStructure() {
@@ -49,4 +50,4 @@ function unanimateLinks() {
   // remove animation + styles
 }
 
-create.createDirectoryStructure();
+create.createFile();

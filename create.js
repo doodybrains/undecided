@@ -1,20 +1,20 @@
-var createFile = require('create-file');
+const fs = require('fs-extra')
+var linkObject = {
+  "linkOne": {
+   "title": "",
+   "url": ""
+ },
+ "linkTwo": {
+  "title": "",
+  "url": ""
+ }
+};
 
-function createDirectoryStructure() {
-  var linkObject = {
-    "linkOne": {
-     "title": "",
-     "url": ""
-   },
-   "linkTwo": {
-    "title": "",
-    "url": ""
-   }
-  };
-
-  createFile('data/index.json', JSON.stringify(linkObject), function (err) {
-    console.log(err);
-  })
+function createFile() {
+  fs.writeFile('links.json', JSON.stringify(linkObject), (err) => {
+    if (err) throw err;
+    console.log('The file has been saved!');
+  });
 }
 
-module.exports.createDirectoryStructure = createDirectoryStructure;
+module.exports.createFile = createFile;
