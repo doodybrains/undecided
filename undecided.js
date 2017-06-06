@@ -1,7 +1,4 @@
-function entry() {
-  console.log('u n d e c i d e d');
-  return "ok";
-}
+var tasks = require('./gulpfile');
 
 function createDirectoryStructure() {
   // create index.html
@@ -52,4 +49,4 @@ function unanimateLinks() {
   // remove animation + styles
 }
 
-module.exports.entry = entry;
+tasks.createDirectoryStructure();

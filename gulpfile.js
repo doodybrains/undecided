@@ -15,11 +15,16 @@ var linkObject = {
  }
 };
 
-gulp.task('create', () =>
-  createFile('data/index.json', JSON.stringify(linkObject), function (err) {
-    console.log(err);
-  })
-);
+function createDirectoryStructure() {
+  // create index.html
+  // create json file
+  return gulp.task('create', () =>
+    createFile('data/index.json', JSON.stringify(linkObject), function (err) {
+      console.log(err);
+    })
+  );
+}
+
 
 gulp.task('build', () =>
   gulp.src('src/index.html')
@@ -29,3 +34,5 @@ gulp.task('build', () =>
   .pipe(template())
   .pipe(gulp.dest('build'))
 );
+
+module.exports.createDirectoryStructure = createDirectoryStructure;
