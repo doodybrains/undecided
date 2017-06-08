@@ -1,6 +1,7 @@
 const fs = require('fs-extra');
 var say = require('say');
-var createHTML = require('create-html')
+var createHTML = require('create-html');
+
 var html = createHTML({
   title: 'site',
   body: '<a href="<%= linkOne.url %>"><%= linkOne.title %></a><a href="<%= linkTwo.url %>"><%= linkTwo.title %></a><a href="<%= linkThree.url %>"><%= linkThree.title %></a>',
@@ -21,7 +22,9 @@ var linkObject = {
  "url": ""
 }
 };
+
 var css = 'body {border: 2px solid red;}';
+
 var dir = './src';
 
 
@@ -34,11 +37,9 @@ function createFile() {
     if (err) console.log(err)
     say.speak('yesssssssssss', 'Alex', .2);
   })
-
   if (!fs.existsSync(dir)){
     fs.mkdirSync(dir);
   }
-
   fs.writeFile('src/style.css', css, function (err) {
     if (err) console.log(err)
     say.speak('yesssssssssss', 'Alex', .2);
