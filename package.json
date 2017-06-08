@@ -1,11 +1,14 @@
 {
   "name": "undecided",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "hmmm",
   "main": "undecided.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": {
+    "undecided": "./undecided.js"
+  },
   "keywords": [
     "emma",
     "rae"
