@@ -21,8 +21,9 @@ var linkObject = {
  "url": ""
 }
 };
+var css = 'body {border: 2px solid red;}';
+var dir = './src';
 
-var css = 'body {border: 2px solid red;}'
 
 function createFile() {
   fs.writeFile('links.json', JSON.stringify(linkObject, null, 4), (err)  => {
@@ -33,7 +34,12 @@ function createFile() {
     if (err) console.log(err)
     say.speak('yesssssssssss', 'Alex', .2);
   })
-  fs.writeFile('style.css', css, function (err) {
+
+  if (!fs.existsSync(dir)){
+    fs.mkdirSync(dir);
+  }
+
+  fs.writeFile('src/style.css', css, function (err) {
     if (err) console.log(err)
     say.speak('yesssssssssss', 'Alex', .2);
   })
