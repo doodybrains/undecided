@@ -4,12 +4,10 @@ var data = require('gulp-data');
 var fs = require('fs');
 
 gulp.task('build', () =>
-  gulp.src('src/index.html')
+  gulp.src('./index.html')
   .pipe(data(function(file) {
-    return JSON.parse(fs.readFileSync('./data/index.json'));
+    return JSON.parse(fs.readFileSync('./links.json'));
   }))
   .pipe(template())
-  .pipe(gulp.dest('build'))
+  .pipe(gulp.dest('src'))
 );
-
-module.exports.createDirectoryStructure = createDirectoryStructure;
