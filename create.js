@@ -4,8 +4,10 @@ var createHTML = require('create-html');
 'use strict';
 var inquirer = require('inquirer');
 
+
 // make number of link questions dynamic
 // make html template dynamic
+//initialize git and push to gh-pages?
 
 var linkQuestions = [
   {
