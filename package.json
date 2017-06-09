@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "bin" : {
+  "bin": {
     "undecided": "./undecided.js"
   },
   "keywords": [
@@ -23,6 +23,7 @@
     "gulp": "^3.9.1",
     "gulp-data": "^1.2.1",
     "gulp-template": "^4.0.0",
+    "inquirer": "^3.1.0",
     "say": "^0.11.0"
   }
 }

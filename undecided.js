@@ -1,5 +1,7 @@
 #!/usr/bin/env node
+
 var create = require('./create');
+
 
 function createDirectoryStructure() {
   // create index.html
@@ -50,4 +52,4 @@ function unanimateLinks() {
   // remove animation + styles
 }
 
-create.createFile();
+create.chooseSiteStyle();
