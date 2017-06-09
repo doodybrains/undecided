@@ -35,25 +35,23 @@ var excitingCss = 'html {box-sizing: border-box;}*, *:before, *:after {box-sizin
 function createFile(style) {
   fs.writeFile('links.json', JSON.stringify(linkObject, null, 4), (err)  => {
     if (err) throw err;
-    say.speak('fuck yeah', 'Alex', .5);
   });
   fs.writeFile('index.html', html, function (err) {
     if (err) console.log(err)
-    say.speak('yesssssssssss', 'Alex', .2);
   })
   if (!fs.existsSync(dir)){
     fs.mkdirSync(dir);
   }
 
-  if (style.which === 'boring') {
+  if (style.which === 'i want my website to be boring.') {
     fs.writeFile('src/style.css', boringCss, function (err) {
       if (err) console.log(err)
-      say.speak('yesssssssssss', 'Alex', .2);
+      say.speak('this website is gonna be boring.', 'Alex', .5);
     })
   } else {
     fs.writeFile('src/style.css', excitingCss, function (err) {
       if (err) console.log(err)
-      say.speak('yesssssssssss', 'Alex', .2);
+      say.speak('this website is gonna be lit!', 'Victoria', 1);
     })
   }
 }
@@ -63,8 +61,8 @@ function chooseSiteStyle() {
     {
       type: 'list',
       name: 'which',
-      message: 'Choose which website you wanna make.',
-      choices: ['Boring', 'Exciting'],
+      message: 'Choose one.',
+      choices: ['I want my website to be boring.', 'I want to my website to be lit.'],
       filter: function (val) {
         return val.toLowerCase();
       }
