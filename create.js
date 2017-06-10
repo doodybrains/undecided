@@ -9,45 +9,25 @@ var inquirer = require('inquirer');
 // make html template dynamic
 //initialize git and push to gh-pages?
 
+
+// handlebars
+// javascript template literals
+// var html = links.map(function(l){
+//   `<a href={linkUrl}>linkName</a>`
+// })
+
 var linkQuestions = [
   {
     type: 'input',
-    name: 'linkOneTitle',
+    name: 'one',
     message: 'What is the name of your first link?'
   },
   {
     type: 'input',
-    name: 'linkOneUrl',
+    name: 'two',
     message: 'What is the URL for your first link?'
-  },
-  {
-    type: 'input',
-    name: 'linkTwoTitle',
-    message: 'What is the name of your second link?'
-  },
-  {
-    type: 'input',
-    name: 'linkTwoUrl',
-    message: 'What is the URL for your second link?'
-  },
-  {
-    type: 'input',
-    name: 'linkThreeTitle',
-    message: 'What is the name of your third link?'
-  },
-  {
-    type: 'input',
-    name: 'linkThreeUrl',
-    message: 'What is the URL for your third link?'
   }
 ];
-
-var html = createHTML({
-  title: 'site',
-  body: '<a id="one" href="<%= linkOneUrl %>"><%= linkOneTitle %></a><a href="<%= linkTwoUrl %>"><%= linkTwoTitle %></a><a href="<%= linkThreeUrl %>"><%= linkThreeTitle %></a>',
-  css: './style.css',
-  script: 'http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js'
-})
 
 var dir = './src';
 
@@ -58,6 +38,11 @@ function createFiles(style, links) {
   fs.writeFile('links.json', JSON.stringify(links, null, 4), (err)  => {
     if (err) throw err;
   });
+
+  var html = links.map(link => {
+    `<p>${link}</p>`
+  })
+
   fs.writeFile('index.html', html, function (err) {
     if (err) console.log(err)
   })
@@ -68,12 +53,12 @@ function createFiles(style, links) {
   if (style.which === 'i want my website to be boring.') {
     fs.writeFile('src/style.css', boringCss, function (err) {
       if (err) console.log(err)
-      // say.speak('this website is gonna be boring.', 'Alex', .5);
+      say.speak('this website is gonna be boring.', 'Alex', .5);
     })
   } else {
     fs.writeFile('src/style.css', litCss, function (err) {
       if (err) console.log(err)
-      // say.speak('this website is gonna be lit!', 'Victoria', 1);
+      say.speak('this website is gonna be lit!', 'Victoria', 1);
     })
   }
 }
