@@ -4,6 +4,8 @@ var createHTML = require('create-html');
 'use strict';
 var inquirer = require('inquirer');
 var dir = './src';
+var ghpages = require('gh-pages');
+var path = require('path');
 
 var boringCss = 'html {box-sizing: border-box;}*, *:before, *:after {box-sizing: inherit;}body {border: 10px solid gray;height:100vh;padding: 0;margin:0;} a{text-align:center;text-transform:uppercase;letter-spacing:.09em;display:block;margin:0 auto;text-align:center;border:1px solid gray;width:100px;}';
 var litCss = 'html {box-sizing: border-box;}*, *:before, *:after {box-sizing: inherit;}body {border: 10px solid #9370DB;height:100vh;padding: 0;margin:0;}a{color:#40E0D0;font-weight:800;font-size:1.2em;text-align:center;text-transform:uppercase;letter-spacing:.09em;position:absolute;display:block;border:1px solid hotpink;width:100px;}a:first-child{top:23%;left:85%;}a:nth-child(2){bottom:42%;right:13%;}a:nth-child(3){top:38%;right:48%;}';
@@ -56,7 +58,7 @@ function makeHtmlPage(html) {
     title: 'site',
     script: 'example.js',
     scriptAsync: true,
-    css: 'src/style.css',
+    css: 'style.css',
     lang: 'en',
     dir: 'rtl',
     head: '<meta name="description" content="example">',
@@ -64,7 +66,7 @@ function makeHtmlPage(html) {
     favicon: 'favicon.png'
   })
 
-  fs.writeFile('index.html', htmlLayout, function (err) {
+  fs.writeFile('src/index.html', htmlLayout, function (err) {
     if (err) console.log(err)
   })
 }
@@ -110,4 +112,9 @@ function makeWebsite(links) {
   });
 }
 
+
+function deployWebsite() {
+  ghpages.publish('src', function(err) {});
+}
 module.exports.makeLinkQuestions = makeLinkQuestions;
+module.exports.deployWebsite = deployWebsite;
