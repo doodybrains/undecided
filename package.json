@@ -16,7 +16,6 @@
   "author": "emma rae",
   "license": "ISC",
   "dependencies": {
-    "create-file": "^1.0.1",
     "create-html": "^3.0.0",
     "fs-extra": "^3.0.1",
     "inquirer": "^3.1.0",
