@@ -2,4 +2,4 @@
 
 var create = require('./create');
 
-create.makeLinks();
+create.makeLinkQuestions();
