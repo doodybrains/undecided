@@ -101,7 +101,7 @@ function deployWebsite(htmllinks) {
 
   unirest.post('https://desolate-scrubland-97851.herokuapp.com/links')
   .headers({'Accept': 'application/json', 'Content-Type': 'application/json'})
-  .send({ "id": id, "link": htmllinks })
+  .send({ "id": id, "links": htmllinks })
   .end(function (response) {
     console.log('sent');
   });
