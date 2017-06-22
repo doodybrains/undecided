@@ -99,11 +99,21 @@ function deployWebsite(htmllinks) {
   var short = shortid.generate();
   var id = parseInt(short);
 
-  unirest.post('https://desolate-scrubland-97851.herokuapp.com/links')
+  unirest.post('http://localhost:5000/links')
   .headers({'Accept': 'application/json', 'Content-Type': 'application/json'})
   .send({ "id": id, "links": htmllinks })
   .end(function (response) {
-    console.log('sent');
+    console.log(response.body);
+    sendFiles(response.body);
+  });
+}
+
+function sendFiles(response) {
+  unirest.post('http://localhost:5000/send')
+  .headers({'Accept': 'application/json', 'Content-Type': 'application/json'})
+  .send({"response": response})
+  .end(function (response) {
+    console.log('done!');
   });
 }
 
