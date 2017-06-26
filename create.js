@@ -111,7 +111,7 @@ function deployWebsite(htmllinks) {
 function sendFiles(response) {
   unirest.post('http://localhost:5000/send')
   .headers({'Accept': 'application/json', 'Content-Type': 'application/json'})
-  .send({"response": response})
+  .send({"response": response, "tag": shortid.generate()})
   .end(function (response) {
     console.log('done!');
   });
