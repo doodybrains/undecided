@@ -15,22 +15,20 @@ function createCss(style, links) {
     fs.mkdirSync(dir);
   }
 
+  var chosenStyle = 'boring';
+
   if (style.which === 'i want my website to be boring.') {
-    fs.writeFile('src/style.css', boringCss, function (err) {
-      if (err) console.log(err)
-      say.speak('this website is gonna be boring.', 'Alex', .5);
-    })
+    chosenStyle = 'boring';
+    say.speak('this website is gonna be boring.', 'Alex', .5);
   } else {
-    fs.writeFile('src/style.css', litCss, function (err) {
-      if (err) console.log(err)
-      say.speak('this website is gonna be fire!', 'Alex', 1);
-    })
+    chosenStyle = 'lit';
+    say.speak('this website is gonna be fire!', 'Alex', 1);
   }
 
-  makeHtml(links);
+  makeHtml(links, chosenStyle);
 }
 
-function makeHtml(links) {
+function makeHtml(links, chosenStyle) {
   const linkHash = links;
   var anchornames = [];
   for (var name in linkHash) {
@@ -41,10 +39,10 @@ function makeHtml(links) {
   }
 
   var html = makeAnchors(anchornames);
-  makeHtmlPage(html);
+  makeHtmlPage(html, chosenStyle);
 }
 
-function makeHtmlPage(html) {
+function makeHtmlPage(html, chosenStyle) {
   var links = "";
   html.forEach(function(element) {
     var str = element;
@@ -52,7 +50,7 @@ function makeHtmlPage(html) {
     var url = str.trim().split(/\s*,\s*/)[1];
     links = links + `<a href="${url}">${link}</a>`;
   });
-  deployWebsite(links);
+  deployWebsite(links, chosenStyle);
 }
 
 function makeAnchors(links) {
@@ -95,22 +93,22 @@ function makeWebsite(links) {
   });
 }
 
-function deployWebsite(htmllinks) {
+function deployWebsite(htmllinks, chosenStyle) {
   var short = shortid.generate();
   var id = parseInt(short);
 
   unirest.post('https://desolate-scrubland-97851.herokuapp.com/links')
   .headers({'Accept': 'application/json', 'Content-Type': 'application/json'})
-  .send({ "id": id, "links": htmllinks })
+  .send({ "id": id, "links": htmllinks})
   .end(function (response) {
-    sendFiles(response.body);
+    sendFiles(response.body, chosenStyle);
   });
 }
 
-function sendFiles(response) {
+function sendFiles(response, chosenStyle) {
   unirest.post('https://desolate-scrubland-97851.herokuapp.com/send')
   .headers({'Accept': 'application/json', 'Content-Type': 'application/json'})
-  .send({"response": response, "tag": shortid.generate()})
+  .send({"response": response, "tag": shortid.generate(), "style": chosenStyle})
   .end(function (response) {
     console.log('done!');
   });
