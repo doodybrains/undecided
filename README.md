@@ -24,5 +24,5 @@ These instructions are for MAC users!
     Example:
      ```my favorite website, http://google.com```
  
- 6. VOILA! In addition to checking out your own url please go to the <a href="https://desolate-scrubland-97851.herokuapp.com/">undecided homepage</a> to see all the links ever added by undecided.js users.
+ 6. YAH0000! In addition to checking out your own url please go to the <a href="https://desolate-scrubland-97851.herokuapp.com/">undecided homepage</a> to see all the links ever added by undecided.js users.
 
