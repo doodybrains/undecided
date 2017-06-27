@@ -97,7 +97,7 @@ function deployWebsite(htmllinks, chosenStyle) {
   var short = shortid.generate();
   var id = parseInt(short);
 
-  unirest.post('http://localhost:5000/links')
+  unirest.post('https://desolate-scrubland-97851.herokuapp.com/links')
   .headers({'Accept': 'application/json', 'Content-Type': 'application/json'})
   .send({ "id": id, "links": htmllinks})
   .end(function (response) {
@@ -106,7 +106,7 @@ function deployWebsite(htmllinks, chosenStyle) {
 }
 
 function sendFiles(response, chosenStyle) {
-  unirest.post('http://localhost:5000/send')
+  unirest.post('https://desolate-scrubland-97851.herokuapp.com/send')
   .headers({'Accept': 'application/json', 'Content-Type': 'application/json'})
   .send({"response": response, "tag": shortid.generate(), "style": chosenStyle})
   .end(function (response) {
