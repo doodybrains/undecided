@@ -14,7 +14,9 @@ These instructions are for MAC users!
 4. When the package has finished installing write the following line:
 
     ```undecided [number]```
-    NOTE: [number] represents the number of links you want to include on your website. So if you wanted to included 3 links on your website you would type:
+    NOTE: [number] represents the number of links you want to include on your website. 
+    For example, if you wanted to included 3 links on your website you would type:
+ 
     ```undecided 3```
     
  5. From here you can simply follow the prompt to fill out the names and urls for each of your links. When typing in the name and the url be sure to separate them by a comma.
