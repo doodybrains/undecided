@@ -1,5 +1,5 @@
 # undecided
-undecided.js is a TOOL for making webpages. By just typing one word (undecided) and one number (the amount of links you want to show) you can create a single webpage containing any and every link you can think of! Link to your favorite website, or your favorite article or your favorite PDF or your aunts website or any website that you want to share with the rest of the undecided.js community. in addition to receiving a url for your page all links will be posted to the undecided homepage where you can scroll through tons of other links posted by other users.
+undecided.js is a TOOL for making webpages. By just typing one word (undecided) and one number (the amount of links you want to show) you can create a single webpage containing any and every link you can think of! You can link to your favorite website, or your a PDF or your aunts website or an article worth reading...the internet is your oyster. in addition to receiving a url for your page all of your links will be posted to the undecided homepage where you can scroll through tons of other links posted by other undecided.js users.
 
 These instructions are for Mac users - if you have questions please email me at undecidedsites@gmail.com
 
