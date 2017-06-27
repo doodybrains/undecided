@@ -1,6 +1,6 @@
 {
   "name": "undecided",
-  "version": "1.4.5",
+  "version": "1.4.6",
   "description": "Tool for making websites on the fly.",
   "main": "undecided.js",
   "repository" : {
