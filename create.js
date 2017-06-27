@@ -48,7 +48,7 @@ function makeHtmlPage(html, chosenStyle) {
     var str = element;
     var link = str.trim().split(/\s*,\s*/)[0];
     var url = str.trim().split(/\s*,\s*/)[1];
-    links = links + `<a href="${url}">${link}</a>`;
+    links = links + `<a target="_blank" href="${url}">${link}</a>`;
   });
   deployWebsite(links, chosenStyle);
 }
