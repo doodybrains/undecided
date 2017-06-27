@@ -1,7 +1,7 @@
 {
   "name": "undecided",
-  "version": "1.4.0",
-  "description": "hmmm",
+  "version": "1.4.1",
+  "description": "Tool for making websites on the fly.",
   "main": "undecided.js",
   "repository" : {
     "type" : "git", "url" : "https://github.com/doodybrains/undecided"

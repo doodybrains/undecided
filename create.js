@@ -103,7 +103,6 @@ function deployWebsite(htmllinks) {
   .headers({'Accept': 'application/json', 'Content-Type': 'application/json'})
   .send({ "id": id, "links": htmllinks })
   .end(function (response) {
-    console.log(response.body);
     sendFiles(response.body);
   });
 }
