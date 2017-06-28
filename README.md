@@ -1,9 +1,9 @@
 # undecided
-undecided.js is a TOOL for making webpages. By just typing one word (undecided) and one number (the amount of links you want to show) you can create a single webpage containing any and every link you can think of! You can link to your favorite website, or a PDF or your aunts blog or an article worth reading...the internet is your oyster. In addition to receiving a url for your personal page all of your links will be posted to the <a target="_blank" href="https://desolate-scrubland-97851.herokuapp.com/">undecided homepage</a> where you can scroll through tons of other links posted by other undecided.js users.
+undecided.js is a TOOL for making webpages. By just typing one word (undecided) and one number (the amount of links you want to show) you can create a single webpage containing any and every link you can think of! You can link to your favorite website, or a PDF or your aunts blog or an article worth reading...the internet is your oyster. In addition to receiving a url for your personal page all of your links will be posted to the <a href="https://desolate-scrubland-97851.herokuapp.com/" target="_blank">undecided homepage</a> where you can scroll through tons of other links posted by other undecided.js users.
 
 These instructions are for Mac users - if you have questions you can email me at undecidedsites@gmail.com
 
-1. Follow instructions <a target="_blank" href="https://nodejs.org/en/">here</a> for downloading and installing Node.js. This will allow you to use this package as well as thousands of other cool packages.
+1. Follow instructions <a href="https://nodejs.org/en/" target="_blank">here</a> for downloading and installing Node.js. This will allow you to use this package as well as thousands of other cool packages.
 
 
 
@@ -50,4 +50,4 @@ These instructions are for Mac users - if you have questions you can email me at
      
      
 
- 6. After choosing the type of site you want and clicking enter you should receive a link in your terminal window. YAH0000! In addition to checking out your own url please go to the <a target="_blank" href="https://desolate-scrubland-97851.herokuapp.com/">undecided homepage</a> to see all links added by other undecided.js users.
+ 6. After choosing the type of site you want and clicking enter you should receive a link in your terminal window. YAH0000! In addition to checking out your own url please go to the <a href="https://desolate-scrubland-97851.herokuapp.com/" target="_blank">undecided homepage</a> to see all links added by other undecided.js users.
