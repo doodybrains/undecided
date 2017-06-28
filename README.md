@@ -1,6 +1,8 @@
 # undecided
 undecided.js is a TOOL for making webpages. By just typing one word (undecided) and one number (the amount of links you want to show) you can create a single webpage containing any and every link you can think of! You can link to your favorite website, or a PDF or your aunts blog or an article worth reading...the internet is your oyster. In addition to receiving a url for your personal page all of your links will be posted to the <a href="https://desolate-scrubland-97851.herokuapp.com/" target="_blank">undecided homepage</a> where you can scroll through tons of other links posted by other undecided.js users.
 
+
+[home](https://desolate-scrubland-97851.herokuapp.com/" target="_blank) 
 These instructions are for Mac users - if you have questions you can email me at undecidedsites@gmail.com
 
 1. Follow instructions <a href="https://nodejs.org/en/" target="_blank">here</a> for downloading and installing Node.js. This will allow you to use this package as well as thousands of other cool packages.
