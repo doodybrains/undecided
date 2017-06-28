@@ -3,25 +3,49 @@ undecided.js is a TOOL for making webpages. By just typing one word (undecided) 
 
 These instructions are for Mac users - if you have questions you can email me at undecidedsites@gmail.com
 
-1. If you don't already have Node.JS installed on your computer you can install it <a href="https://nodejs.org/en/">here</a>.
+1. Follow instructions <a href="https://nodejs.org/en/">here</a> for downloading and installing Node.js. This will allow you to use this package as well as thousands of other cool packages.
+
+
 
 2. Once Node.JS is installed open the application called Terminal. You can find it easily by opening a spotlight search (CMD + SPACEBAR) and typing in "Terminal"
 
-3. Directly after the $ write the following line:
+
+
+
+3. Directly after the $ write the following line
 
    ```npm install -g undecided```
+   
+   then click ENTER
+   
+   _NOTE: if you get some errors that say something like npm ERR! Error: EACCES you can type in the following line:
+   
+   ```sudo chown -R $USER /usr/local```
+   
+      then click ENTER
+      
+      
+      
 
 4. When the package has finished installing write the following line:
 
     ```undecided [number]```
+    
+    then click ENTER
 
     _NOTE: [number] represents the number of links you want to include on your website.
     For example, if you wanted to included 3 links on your website you would type:_
 
     ```undecided 3```
 
- 5. From here you can simply follow the prompt to fill out the names and urls for each of your links. When typing in the name and the url be sure to separate them by a comma.
+
+
+
+ 5. From here you can simply follow the prompt to fill out the names and urls for each of your links (clicking enter after each one). When typing in the name and the url be sure to separate them by a comma.
     Example:
      ```my favorite website, http://google.com```
+     
+     
+     
 
- 6. YAH0000! In addition to checking out your own url please go to the <a href="https://desolate-scrubland-97851.herokuapp.com/">undecided homepage</a> to see all the links ever added by undecided.js users.
+ 6. Once you choose the type of site you want to make and click enter you receive a link in your terminal window. YAH0000! In addition to checking out your own url please go to the <a href="https://desolate-scrubland-97851.herokuapp.com/">undecided homepage</a> to see all links added by other undecided.js users.
