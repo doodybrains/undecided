@@ -22,7 +22,7 @@ These instructions are for Mac users - if you have questions you can email me at
    
    ```sudo chown -R $USER /usr/local```
    
-      then click ENTER
+      then click ENTER and try `npm install -g undecided` again.
       
       
       
