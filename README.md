@@ -27,16 +27,18 @@ These instructions are for Mac users - if you have questions you can email me at
       
       
 
-4. When the package has finished installing write the following line:
+4. When the package has finished installing type in the following line:
 
     ```undecided [number]```
     
+                  _NOTE: [number] represents the number of links you want to include on your website.
+                  For example, if you wanted to include 3 links on your website you would type:_
+
+                  ```undecided 3```
+    
     then click ENTER
 
-    _NOTE: [number] represents the number of links you want to include on your website.
-    For example, if you wanted to included 3 links on your website you would type:_
 
-    ```undecided 3```
 
 
 
