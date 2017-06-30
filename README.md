@@ -49,7 +49,7 @@ undecided.js is a TOOL for making webpages. By just typing one word (undecided) 
 
  5. From here you can simply follow the prompts to fill out the names and urls for each of your links (clicking enter after each one). When typing in the name and the url be sure to separate them by a comma.
     For example:
-     ```most boring website ever, http://instagram.com```
+     ```most boring website ever, http://google.com```
      
      
      
