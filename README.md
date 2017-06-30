@@ -55,3 +55,6 @@ undecided.js is a TOOL for making webpages. By just typing one word (undecided) 
      
 
  6. After choosing the type of site you want and clicking enter you should receive a link in your terminal window. YAH0000! In addition to checking out your own url please go to the <a href="https://desolate-scrubland-97851.herokuapp.com/" target="_blank">undecided homepage</a> to see all links added by other undecided.js users.
+ 
+ 
+ one more thing! make sure ur volume is all the way up.
