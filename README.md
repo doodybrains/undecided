@@ -26,6 +26,11 @@ These instructions are for Mac users - if you have questions you can email me at
       then click ENTER and try `npm install -g undecided` again.
       
       
+      **If you have installed undecided already you should make sure you have the latest version by typing:**
+      
+      
+      ```npm update -g undecided```
+    
       
 
 4. When the package has finished installing type in the following line:
