@@ -17,7 +17,7 @@ undecided.js is a TOOL for making webpages. By just typing one word (undecided) 
    
    then click ENTER
    
-   _NOTE: if you get some errors that say something like npm ERR! Error: EACCES you can type in the following line:
+   > > _NOTE: if you get some errors that say something like npm ERR! Error: EACCES you can type in the following line:_
    
    ```sudo chown -R $USER /usr/local```
    
