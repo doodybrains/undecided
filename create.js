@@ -72,21 +72,30 @@ function makeLinkQuestions() {
     makeLinks(objects);
   } else {
     say.speak('fuck!', 'Alex', .8);
+    console.log('              ');
     console.log('************************************');
     console.log('8===D ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
-    console.log('%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%');
+    console.log('---------------');
     console.log('                                                                                             ');
     console.log('You have to enter a valid number.');
     console.log('For example if you want your page to have 5 links it should look like this: undecided 5');
     console.log('                                                                                             ');
-    console.log('%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%');
+    console.log('---------------------------');
     console.log('8===D ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
     console.log('************************************');
+    console.log('              ');
   }
 }
 
 function makeLinks(objects) {
+  console.log('              ');
+  console.log('************************************');
+  console.log('                                                                                             ');
   console.log('You can now fill out the names and urls for each of your links. Each name and url should be separated by a comma. For example: worst website ever, http://facebook.com');
+  console.log('                                                                                             ');
+  console.log('************************************');
+  console.log('              ');
+
   inquirer.prompt(objects).then(function (answers) {
      makeWebsite(answers);
   });
