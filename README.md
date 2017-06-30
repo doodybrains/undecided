@@ -19,9 +19,9 @@ undecided.js is a TOOL for making webpages. By just typing one word (undecided) 
    
    > > _NOTE: if you get some errors that say something like npm ERR! Error: EACCES you can type in the following line:_
    
-   ```sudo chown -R $USER /usr/local```
+   > > ```sudo chown -R $USER /usr/local```
    
-      then click ENTER and try `npm install -g undecided` again.
+   > > then click ENTER and try `npm install -g undecided` again.
       
       
       **If you installed undecided.js already you should make sure you have the latest version by typing:**
