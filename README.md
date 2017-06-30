@@ -11,7 +11,7 @@ undecided.js is a TOOL for making webpages. By just typing one word (undecided) 
 
 
 
-3. In the Terminal window directly after the $ write the following line
+3. In the Terminal window directly after the $ type the following line
 
    ```npm install -g undecided```
    
@@ -24,7 +24,7 @@ undecided.js is a TOOL for making webpages. By just typing one word (undecided) 
       then click ENTER and try `npm install -g undecided` again.
       
       
-      **If you have installed undecided already you should make sure you have the latest version by typing:**
+      **If you installed undecided.js already you should make sure you have the latest version by typing:**
       
       
       ```npm update -g undecided```
