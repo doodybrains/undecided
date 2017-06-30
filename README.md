@@ -24,21 +24,21 @@ undecided.js is a TOOL for making webpages. By just typing one word (undecided) 
    > > then click ENTER and try `npm install -g undecided` again.
       
       
-      **If you installed undecided.js already you should make sure you have the latest version by typing:**
+      **If you already have undecided.js installed on your system make sure you have the latest version by typing:**
       
       
       ```npm update -g undecided```
     
       
 
-4. When the package has finished installing type in the following line:
+4. When the package has finished installing type the following line:
 
     ```undecided [number]```
     
-                  NOTE: [number] represents the number of links you want to include on your website.
-                  For example, if you wanted to include 3 links on your website you would type:
+      > > _NOTE: [number] represents the number of links you want to include on your website._
+      > > For example, if you wanted to include 3 links on your website you would type:
 
-                  undecided 3
+      > > ```undecided 3```
     
     then click ENTER
 
@@ -49,7 +49,7 @@ undecided.js is a TOOL for making webpages. By just typing one word (undecided) 
 
  5. From here you can simply follow the prompts to fill out the names and urls for each of your links (clicking enter after each one). When typing in the name and the url be sure to separate them by a comma.
     Example:
-     ```my favorite website, http://duckduckgo.com```
+     ```worst website ever, http://facebook.com```
      
      
      
