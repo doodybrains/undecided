@@ -1,4 +1,4 @@
-# undecided
+# undecided.js
 undecided.js is a tool for making webpages. by just typing 1 word (undecided) and 1 number (the amount of links u want to show) u can create a single webpage containing any and every link u can think of! u can link to ur favorite website, a PDF, ur aunts blog, an article worth reading...anything! the internet is ur oyster. in addition to receiving a url for ur personal page all of ur links will be posted to the <a href="https://desolate-scrubland-97851.herokuapp.com/" target="_blank">undecided homepage</a> where u can scroll through all the links posted by other undecided.js users.
 
 Follow instructions below or on the <a href="https://desolate-scrubland-97851.herokuapp.com/tutorial" target="_blank">undecided.js tutorial homepage</a>.
