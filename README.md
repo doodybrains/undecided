@@ -3,6 +3,14 @@ undecided.js is a tool for making webpages. by just typing 1 word (undecided) an
 
 Follow instructions below or on the <a href="https://desolate-scrubland-97851.herokuapp.com/tutorial" target="_blank">undecided.js tutorial homepage</a>.
 
+
+      
+      **If you already have undecided.js installed on your system make sure you have the latest version by typing:**
+      
+      
+      ```npm update -g undecided```
+      
+      
 1. If you don't already have Node installed on your computer follow instructions <a href="https://nodejs.org/en/" target="_blank">here</a> for downloading and installing it. This will allow you to use this package as well as tons of other kooool packages.
 
 
@@ -23,14 +31,7 @@ Follow instructions below or on the <a href="https://desolate-scrubland-97851.he
    > > ```sudo chown -R $USER /usr/local```
    
    > > then click ENTER and try `npm install -g undecided` again.
-      
-      
-      **If you already have undecided.js installed on your system make sure you have the latest version by typing:**
-      
-      
-      ```npm update -g undecided```
-    
-      
+            
 
 4. When the package has finished installing type the following line:
 
