@@ -4,9 +4,7 @@ undecided.js is a tool for making webpages. by just typing 1 word (undecided) an
 Follow instructions below or on the <a href="https://desolate-scrubland-97851.herokuapp.com/tutorial" target="_blank">undecided.js tutorial homepage</a>.
 
 
-      
-      **If you already have undecided.js installed on your system make sure you have the latest version by typing:**
-      
+ **If you already have undecided.js installed on your system make sure you have the latest version by typing:**
       
       ```npm update -g undecided```
       
