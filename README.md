@@ -6,7 +6,7 @@ Follow instructions below or on the <a href="https://desolate-scrubland-97851.he
 
  **If you already have undecided.js installed on your system make sure you have the latest version by typing:**
       
-      ```npm update -g undecided```
+```npm update -g undecided```
       
       
 1. If you don't already have Node installed on your computer follow instructions <a href="https://nodejs.org/en/" target="_blank">here</a> for downloading and installing it. This will allow you to use this package as well as tons of other kooool packages.
