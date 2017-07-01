@@ -89,11 +89,13 @@ function makeLinkQuestions() {
 
 function makeLinks(objects) {
   console.log('              ');
-  console.log('************************************');
-  console.log('                                                                                             ');
-  console.log('You can now fill out the names and urls for each of your links. Each name and url should be separated by a comma. For example: worst website ever, http://facebook.com');
-  console.log('                                                                                             ');
-  console.log('************************************');
+  console.log('-----------------------');
+  console.log('                 ');
+  console.log('You can now fill out the names and urls for each of your links. ');
+  console.log('Each name and url should be separated by a comma. For example: worst website ever, http://facebook.com');
+  console.log('Also, make sure your links are prepended with http://');
+  console.log('                 ');
+  console.log('-----------------------');
   console.log('              ');
 
   inquirer.prompt(objects).then(function (answers) {
