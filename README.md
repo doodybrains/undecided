@@ -37,18 +37,12 @@ Follow instructions below or on the <a href="https://desolate-scrubland-97851.he
     ```undecided [number]```
     
       > > _NOTE: [number] represents the number of links you want to include on your website._
-      > > For example, if you wanted to include 3 links on your website you would type:
-
-      > > ```undecided 3```
     
     then click ENTER
 
 
 
-
-
-
- 5. From here you can simply follow the prompts to fill out the names and urls for each of your links (clicking enter after each one). When typing in the name and the url be sure to separate them by a comma.
+5. From here you can simply follow the prompts to fill out the names and urls for each of your links (clicking enter after each one). When typing in the name and the url be sure to separate them by a comma.
     For example:
      ```most boring website ever, http://google.com```
      
