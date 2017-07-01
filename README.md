@@ -1,18 +1,18 @@
 # undecided
-undecided.js is a TOOL for making webpages. By just typing one word (undecided) and one number (the amount of links you want to show) you can create a single webpage containing any and every link you can think of! You can link to your favorite website, or a PDF or your aunts blog or an article worth reading...the internet is your oyster. In addition to receiving a url for your personal page all of your links will be posted to the <a href="https://desolate-scrubland-97851.herokuapp.com/" target="_blank">undecided homepage</a> where you can scroll through lots of links posted by other undecided.js users.
+undecided.js is a tool for making webpages. by just typing 1 word (undecided) and 1 number (the amount of links u want to show) u can create a single webpage containing any and every link u can think of! u can link to ur favorite website, a PDF, ur aunts blog, an article worth reading...anything! the internet is ur oyster. in addition to receiving a url for ur personal page all of ur links will be posted to the <a href="https://desolate-scrubland-97851.herokuapp.com/" target="_blank">undecided homepage</a> where u can scroll through all the links posted by other undecided.js users.
 
-You can follow instructions below or on the <a href="https://desolate-scrubland-97851.herokuapp.com/tutorial" target="_blank">undecided.js tutorial homepage</a>.
+Follow instructions below or on the <a href="https://desolate-scrubland-97851.herokuapp.com/tutorial" target="_blank">undecided.js tutorial homepage</a>.
 
-1. If you don't already have Node installed on your computer you can follow instructions <a href="https://nodejs.org/en/" target="_blank">here</a> for downloading and installing it. This will allow you to use this package as well as thousands of other kooool packages.
-
-
-
-2. Once Node.js is installed, open the application called Terminal. You can find Terminal by opening a spotlight search (CMD + SPACEBAR) and typing in "Terminal"
+1. If you don't already have Node installed on your computer follow instructions <a href="https://nodejs.org/en/" target="_blank">here</a> for downloading and installing it. This will allow you to use this package as well as tons of other kooool packages.
 
 
 
+2. Once Node.js is installed, open the application called terminal. You can find terminal by opening a spotlight search (CMD + SPACEBAR) and typing in "terminal"
 
-3. In the Terminal window directly after the $ type the following line
+
+
+
+3. In the terminal window directly after the $ type the following line
 
    ```npm install -g undecided```
    
