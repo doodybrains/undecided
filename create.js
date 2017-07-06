@@ -1,103 +1,31 @@
 'use strict';
-const fs = require('fs');
+var fs = require('fs');
 var say = require('say');
 var inquirer = require('inquirer');
-var dir = './src';
 var path = require('path');
 var unirest = require('unirest');
 var shortid = require('shortid');
+var messaging = require('./helper.js');
 
-var boringCss = 'html {box-sizing: border-box;}*, *:before, *:after {box-sizing: inherit;}body {border: 10px solid gray;height:100vh;padding: 0;margin:0;} a{text-align:center;text-transform:uppercase;letter-spacing:.09em;display:block;margin:0 auto;text-align:center;border:1px solid gray;width:100px;}';
-var litCss = 'html {box-sizing: border-box;}*, *:before, *:after {box-sizing: inherit;}body {border: 10px solid #9370DB;height:100vh;padding: 0;margin:0;}a{color:#40E0D0;font-weight:800;font-size:1.2em;text-align:center;text-transform:uppercase;letter-spacing:.09em;position:absolute;display:block;border:1px solid hotpink;width:100px;}a:first-child{top:23%;left:85%;}a:nth-child(2){bottom:42%;right:13%;}a:nth-child(3){top:38%;right:48%;}';
-
-function createCss(style, links) {
-  if (!fs.existsSync(dir)){
-    fs.mkdirSync(dir);
-  }
-
-  var chosenStyle = 'boring';
-
-  if (style.which === 'i want my website to be boring.') {
-    chosenStyle = 'boring';
-    say.speak('this website is gonna be boring.', 'Alex', .5);
-  } else {
-    chosenStyle = 'lit';
-    say.speak('this website is gonna be fire!', 'Alex', 1);
-  }
-
-  makeHtml(links, chosenStyle);
-}
-
-function makeHtml(links, chosenStyle) {
-  const linkHash = links;
-  var anchornames = [];
-  for (var name in linkHash) {
-    if (linkHash.hasOwnProperty(name)) {
-      var value = linkHash[name];
-      anchornames.push(value);
-    }
-  }
-
-  var html = makeAnchors(anchornames);
-  makeHtmlPage(html, chosenStyle);
-}
-
-function makeHtmlPage(html, chosenStyle) {
-  var links = "";
-  html.forEach(function(element) {
-    var str = element;
-    var link = str.trim().split(/\s*,\s*/)[0];
-    var url = str.trim().split(/\s*,\s*/)[1];
-    links = links + `<a target="_blank" href="${url}">${link}</a>`;
-  });
-  deployWebsite(links, chosenStyle);
-}
-
-function makeAnchors(links) {
-  var anchors=[];
-  links.forEach(function(element) {
-     anchors.push(`${element}`);
-  });
-  return anchors.concat(' ');
-}
-
-function makeLinkQuestions() {
+function createUndecidedSite() {
   var objects = [];
   var numberOfLinks = process.argv[2];
-  const linkAmount = numberOfLinks;
+  var linkAmount = numberOfLinks;
   for (var x = 0; x < linkAmount; x++) {
     objects[x] = {type: 'input', name: `${x}`, message: `Type the name and then the url of link ${x}:`};
   }
+
   if (linkAmount > 0) {
     makeLinks(objects);
   } else {
     say.speak('fuck!', 'Alex', .8);
-    console.log('              ');
-    console.log('************************************');
-    console.log('8===D ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
-    console.log('---------------');
-    console.log('                                                                                             ');
-    console.log('You have to enter a valid number.');
-    console.log('For example if you want your page to have 5 links it should look like this: undecided 5');
-    console.log('                                                                                             ');
-    console.log('---------------------------');
-    console.log('8===D ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
-    console.log('************************************');
-    console.log('              ');
+    messaging.errorMessage();
   }
 }
 
 function makeLinks(objects) {
-  console.log('              ');
-  console.log('-----------------------');
-  console.log('                 ');
-  console.log('You can now fill out the names and urls for each of your links. ');
-  console.log('Each name and url should be separated by a comma. For example: worst website ever, http://facebook.com');
-  console.log('Also, make sure your links are prepended with http://');
-  console.log('                 ');
-  console.log('-----------------------');
-  console.log('              ');
 
+  messaging.successMessage();
   inquirer.prompt(objects).then(function (answers) {
      makeWebsite(answers);
   });
@@ -119,6 +47,55 @@ function makeWebsite(links) {
   });
 }
 
+function createCss(style, links) {
+  var chosenStyle = 'boring';
+  if (style.which === 'i want my website to be boring.') {
+    say.speak('this website is gonna be boring.', 'Alex', .5);
+  } else {
+    chosenStyle = 'lit';
+    say.speak('this website is gonna be fire!', 'Alex', 1);
+  }
+
+  makeHtml(links, chosenStyle);
+}
+
+function makeHtml(links, chosenStyle) {
+  var linkHash = links;
+  var anchornames = [];
+
+  for (var name in linkHash) {
+    if (linkHash.hasOwnProperty(name)) {
+      var value = linkHash[name];
+      anchornames.push(value);
+    }
+  }
+
+  var html = makeAnchors(anchornames);
+  makeHtmlPage(html, chosenStyle);
+}
+
+function makeAnchors(links) {
+  var anchors=[];
+  links.forEach(function(element) {
+     anchors.push(`${element}`);
+  });
+
+  return anchors.concat(' ');
+}
+
+function makeHtmlPage(html, chosenStyle) {
+  var links = "";
+
+  html.forEach(function(element) {
+    var str = element;
+    var link = str.trim().split(/\s*,\s*/)[0];
+    var url = str.trim().split(/\s*,\s*/)[1];
+    links = links + `<a target="_blank" href="${url}">${link}</a>`;
+  });
+
+  deployWebsite(links, chosenStyle);
+}
+
 function deployWebsite(htmllinks, chosenStyle) {
   var short = shortid.generate();
   var id = parseInt(short);
@@ -136,8 +113,11 @@ function sendFiles(response, chosenStyle) {
   .headers({'Accept': 'application/json', 'Content-Type': 'application/json'})
   .send({"response": response, "tag": shortid.generate(), "style": chosenStyle})
   .end(function (response) {
+    console.log('');
+    console.log('**** yah0000000000 ****)');
     console.log(response.body);
+    console.log('');
   });
 }
 
-module.exports.makeLinkQuestions = makeLinkQuestions;
+module.exports.createUndecidedSite = createUndecidedSite;
