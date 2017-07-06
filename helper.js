@@ -20,8 +20,8 @@ var messaging = {
     console.log('                                          ');
     console.log('Fill out the names and urls for each of your links below.');
     console.log('                                          ');
-    console.log('Each url must be prepended by http://, its easiest to copy and paste it directly from your browser.');
-    console.log('                                          ');
+    console.log('Each url must be prepended by http://');
+    console.log('It is easiest to copy and paste the url directly from your browser.');
     console.log('Each name and url should be separated by a comma. For example: worst website ever, http://facebook.com');
     console.log('                                             ');
     console.log('************************************');

@@ -114,7 +114,8 @@ function sendFiles(response, chosenStyle) {
   .send({"response": response, "tag": shortid.generate(), "style": chosenStyle})
   .end(function (response) {
     console.log('');
-    console.log('**** yah0000000000 ****)');
+    console.log('**** yah0000000000 ****');
+    console.log('');
     console.log(response.body);
     console.log('');
   });
