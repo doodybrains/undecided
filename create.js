@@ -90,6 +90,9 @@ function makeHtmlPage(html, chosenStyle) {
     var str = element;
     var link = str.trim().split(/\s*,\s*/)[0];
     var url = str.trim().split(/\s*,\s*/)[1];
+    if (url === undefined) {
+      url = link;
+    }
     links = links + `<a target="_blank" href="${url}">${link}</a>`;
   });
 
